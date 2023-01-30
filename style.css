@@ -1,0 +1,409 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "impact";
+  src: url("../fonts/impact.eot");
+  src: local("☺"), url("fonts/impact.woff") format("woff"), url("fonts/impact.ttf") format("truetype"), url("fonts/impact.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1630px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.body {
+  padding: 153px 0 152px;
+}
+.body__title {
+  font-family: "impact";
+  position: relative;
+  font-size: 40px;
+  line-height: 122.5%;
+  color: #201714;
+  margin-bottom: 80px;
+}
+.body__title:before {
+  content: "";
+  position: absolute;
+  border-bottom: 4px solid #FFCC01;
+  width: 88px;
+  display: block;
+  bottom: -8px;
+  left: 0;
+}
+.cards-body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+._one {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 113.52px;
+  height: 113.52px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: circle-one 13s linear infinite alternate;
+          animation: circle-one 13s linear infinite alternate;
+  offset-path: path("M177.305 43.3632C159.782 42.6455 142.533 40.1581 124.93 40.4671C112.134 40.6917 99.4519 41.9495 87.1288 47.2247C78.0631 51.1055 69.8349 57.7542 61.169 62.9923C58.8999 64.3639 40.5607 71.1767 43.7486 77.6337C48.22 86.6902 61.2284 84.1418 68.0005 86.8047C74.5473 89.379 81.0952 91.011 87.9258 91.1489C92.814 91.2475 97.7326 91.1342 102.614 90.8271C108.206 90.4751 121.09 92.1637 125.158 84.7131C129.775 76.2552 123.343 61.8762 119.351 56.2348C110.067 43.1153 98.3283 40.8818 86.7303 34.4336C81.7354 31.6565 77.1957 27.5615 72.1564 24.8603C69.7952 23.5948 66.9093 23.3102 66.6911 19.1486C66.0125 6.20285 75.7173 5.38474 82.8591 3.70273C85.9134 2.98338 94.2998 0.553438 97.3191 3.22004C101.525 6.93494 96.3619 38.5103 96.1805 40.1453C93.8443 61.2004 91.9803 73.3754 89.0074 94.4472C87.4691 105.351 82.1281 126.752 85.4209 138.935C87.6662 147.242 98.4075 156.121 103.297 161.138C111.331 169.382 121.488 167.896 130.85 167.896C141.332 167.896 151.321 167.388 161.137 161.46C169.394 156.474 179.066 153.338 186.47 146.014C192.93 139.624 198.927 132.942 201.044 122.041C203.973 106.964 210.39 95.8512 195.807 90.0226C184.922 85.6722 172.728 85.7589 161.535 85.7589C150.396 85.7589 131.992 84.1548 130.452 105.549C129.196 123 143.929 136.883 155.216 131.453C157.319 130.441 166.944 125.142 166.944 120.834C166.944 112.891 154.42 110.184 150.89 109.41C142.737 107.623 132.322 106.969 124.247 109.169C115.74 111.486 108.571 118.984 100.223 122.201C74.931 131.949 41.7667 134.637 17.675 117.696C1.4881 106.314 1.7896 75.1447 2.07638 52.856C2.31276 34.4846 13.1065 36.6436 23.5957 38.2146C60.3184 43.7148 89.9606 79.3929 125.101 90.9075C130.616 92.7149 136.027 92.5969 141.667 92.5969C152.989 92.5969 164.678 93.6206 175.938 91.6315C182.655 90.4451 188.049 84.6229 189.089 75.2203C189.876 68.1055 190.308 59.6435 186.186 54.304C182.371 49.3627 177.569 48.4535 175.255 41.9152");
+}
+
+@-webkit-keyframes circle-one {
+  100% {
+    width: 20px;
+    height: 20px;
+    offset-distance: 100%;
+  }
+}
+
+@keyframes circle-one {
+  100% {
+    width: 20px;
+    height: 20px;
+    offset-distance: 100%;
+  }
+}
+._two {
+  position: absolute;
+  width: 44.89px;
+  height: 44.89px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: circle-two 15s linear infinite alternate;
+          animation: circle-two 15s linear infinite alternate;
+  offset-path: path("M19 27C26.3164 20.2586 43.0585 -0.632554 58 2.44445C63.3746 3.55128 67.4217 9.17682 69.4444 14.2778C75.2701 28.9685 69.4789 41.7513 61.7778 53.8889C58.5009 59.0536 39.2444 72.1276 45.5556 81.3333C48.761 86.009 57.6351 89.4102 63 90.4444C67.331 91.2793 74.6957 91.0787 78.7222 88.7778C87.4622 83.7835 95.7634 76.2713 104.056 70.5C114.125 63.4919 115.696 58.1141 118 46.7778C119.918 37.3393 122.728 27.3918 128.778 19.6667C141.575 3.32581 162.441 41.421 164.889 51C170.512 73.0034 160.331 88.1495 142.444 100.556C122.222 114.582 99.0622 123.96 75 129.111C56.1857 133.139 29.2916 137.554 11.3889 126.889C-2.13147 118.834 2.22781 102.695 7.27778 91.2778C9.27679 86.7583 8.9091 82.3915 9.22222 77.5556C9.71336 69.9702 10.8872 62.5014 11 54.8889C11.0916 48.7072 10.7712 41.8669 12.6667 35.8889C13.9778 31.7538 15.5208 28.313 16 24");
+  offset-distance: 0%;
+}
+
+@-webkit-keyframes circle-two {
+  100% {
+    offset-distance: 100%;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@keyframes circle-two {
+  100% {
+    offset-distance: 100%;
+    width: 120px;
+    height: 120px;
+  }
+}
+._three {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: circle-three 10s linear infinite alternate;
+          animation: circle-three 10s linear infinite alternate;
+  offset-path: path("M57 25C48.9527 25 39.6782 24.6008 32.2222 28.2222C26.9585 30.7789 20.5954 41.2768 18.3333 46.3333C12.4301 59.5288 26.4782 64.1432 36.6667 65.6667C48.3658 67.4161 59.376 69 71.2222 69C82 69 92.7778 69 103.556 69C111.138 69 119.176 69.8441 126.556 67.7778C137.591 64.6879 156.809 55.6695 158.944 42.5C159.719 37.7207 161.139 32.2867 158.389 27.9444C153.216 19.7768 143.094 15.0837 134.389 11.7222C114.779 4.15027 95.9928 3 75.3889 3C58.8377 3 38.5637 -0.586804 23.4444 7.16667C13.9108 12.0557 6.34959 25.5542 3.55555 35.3333C2.57039 38.7814 3.09799 42.4683 2.94444 46C2.76381 50.1545 1.29915 54.2793 1.66666 58.4444C2.23813 64.9211 7.14601 71.2895 11.7778 75.5556C19.627 82.7851 31.7785 85.08 41.7778 87.3333C58.7896 91.167 76.4287 93.628 93.8889 93.6667C109.149 93.7004 121.547 91.729 133.222 82C139.887 76.4462 140.416 70.9731 142.778 62.8889C147.096 48.1076 142.008 42.69 128.778 34.7778C120.244 29.6743 112.094 30 102.444 30C89.397 30 78.8136 29.6957 68.5 38.5C64.8077 41.652 59.092 46.1699 60.1667 51.7222C62.1645 62.0442 84.0941 66.7923 92.3889 62.8889C98.5412 59.9937 110.735 51.4605 108.778 43.3889C106.289 33.1224 89.0287 31.5691 80.5555 31.0556C71.3473 30.4975 63.8755 25.5358 55 23");
+  offset-distance: 60%;
+}
+
+@-webkit-keyframes circle-three {
+  100% {
+    offset-distance: 100%;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@keyframes circle-three {
+  100% {
+    offset-distance: 100%;
+    width: 40px;
+    height: 40px;
+  }
+}
+._four {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: circle-four 13s linear infinite alternate;
+          animation: circle-four 13s linear infinite alternate;
+  offset-path: path("M101 48C101 37.0282 103.323 20.7615 97.7222 10.8333C94.8679 5.77335 84.0276 4.94904 79.3333 4.16667C67.8698 2.25608 55.5226 1.12184 44.3333 5.05556C20.2383 13.5265 8.97002 40.0813 4.22222 63.2222C-2.22945 94.6678 1.00721 141.37 37.1111 153.111C57.946 159.887 88.5923 156.556 96.3889 133.167C103.945 110.498 108.514 82.2964 93.2222 62.1111C81.8012 47.0353 56.2167 38.8344 38.1667 42.4444C26.3815 44.8015 23.8248 56.4331 21.5556 66.4444C19.5275 75.3919 16.9317 85.5453 18.6667 94.7778C21.8001 111.452 37.2133 119.563 52.5556 122.889C71.321 126.957 79.5879 118.813 88.9444 104.778C93.3739 98.1335 96.5188 92.4346 97.5 84.3889C98.8069 73.6724 97.9229 62.7706 99 52");
+  offset-distance: 0%;
+}
+
+@-webkit-keyframes circle-four {
+  100% {
+    offset-distance: 100%;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@keyframes circle-four {
+  100% {
+    offset-distance: 100%;
+    width: 60px;
+    height: 60px;
+  }
+}
+._five {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-animation: circle-five 10s linear infinite alternate;
+          animation: circle-five 10s linear infinite alternate;
+  offset-path: path("M101 48C101 37.0282 103.323 20.7615 97.7222 10.8333C94.8679 5.77335 84.0276 4.94904 79.3333 4.16667C67.8698 2.25608 55.5226 1.12184 44.3333 5.05556C20.2383 13.5265 8.97002 40.0813 4.22222 63.2222C-2.22945 94.6678 1.00721 141.37 37.1111 153.111C57.946 159.887 88.5923 156.556 96.3889 133.167C103.945 110.498 108.514 82.2964 93.2222 62.1111C81.8012 47.0353 56.2167 38.8344 38.1667 42.4444C26.3815 44.8015 23.8248 56.4331 21.5556 66.4444C19.5275 75.3919 16.9317 85.5453 18.6667 94.7778C21.8001 111.452 37.2133 119.563 52.5556 122.889C71.321 126.957 79.5879 118.813 88.9444 104.778C93.3739 98.1335 96.5188 92.4346 97.5 84.3889C98.8069 73.6724 97.9229 62.7706 99 52");
+  offset-distance: 40%;
+}
+
+@-webkit-keyframes circle-five {
+  100% {
+    offset-distance: 100%;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@keyframes circle-five {
+  100% {
+    offset-distance: 100%;
+    width: 20px;
+    height: 20px;
+  }
+}
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 188px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #79C800;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 16px;
+}
+.card:hover {
+  cursor: pointer;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%), rgba(121, 200, 0, 0.4);
+}
+.card:hover .circle {
+  opacity: 1;
+}
+.card__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.card__image img {
+  max-width: 248px;
+  width: 100%;
+  max-height: 138px;
+  height: 100%;
+}
+.card__image:hover img {
+  opacity: 0;
+}
+.card__title {
+  font-family: "Raleway";
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 116.6666666667%;
+  letter-spacing: -1px;
+  color: #201714;
+}
+
+._pesticides:hover {
+  background: url("img/card1.1.png");
+  background-size: 100%;
+}
+
+._crop:hover {
+  background: url("img/card2.2.png");
+  background-size: 100%;
+}
+
+._pests:hover {
+  background: url("img/card3.3.png");
+  background-size: 100%;
+}
+
+._substances:hover {
+  background: url("img/card4.4.png");
+  background-size: 100%;
+}
+
+.leaf_green {
+  position: absolute;
+  top: 77px;
+  left: 0px;
+}
+
+.leaf_brown {
+  position: absolute;
+  top: 657px;
+  right: 10px;
+}
+
+.sun {
+  position: absolute;
+  top: 11px;
+  right: 0;
+}
+
+.spots_grey {
+  position: absolute;
+  left: 0;
+  top: 508px;
+}
+
+.spots_brown {
+  position: absolute;
+  top: 0;
+  right: 585px;
+}
+
+@media (max-width: 1440px) {
+  .card__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .spots_brown {
+    right: 257px;
+  }
+}
+@media (min-width: 769px) {
+  .leaf_brown {
+    right: 561px;
+    top: 435px;
+  }
+}
+@media (max-width: 768px) {
+  .cards-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .leaf_green img {
+    width: 108px;
+    height: 113px;
+  }
+  .leaf_brown img {
+    width: 74px;
+    height: 69px;
+  }
+  .spots_brown {
+    right: 210px;
+  }
+  .spots_grey {
+    top: 709px;
+  }
+  .sun img {
+    width: 217px;
+    height: 352px;
+  }
+}
+@media (max-width: 425px) {
+  .body__title {
+    font-size: 32px;
+    margin-bottom: 58px;
+  }
+  .cards-body {
+    grid-template-columns: 1fr;
+  }
+  .sun {
+    top: 105px;
+  }
+  .sun img {
+    width: 138px;
+    height: 227px;
+  }
+  .spots_brown {
+    right: 137px;
+  }
+}/*# sourceMappingURL=style.css.map */
